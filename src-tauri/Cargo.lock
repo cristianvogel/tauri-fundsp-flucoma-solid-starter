@@ -931,6 +931,7 @@ dependencies = [
 [[package]]
 name = "flucoma-rs"
 version = "0.1.0"
+source = "git+https://github.com/cristianvogel/flucoma-rs?rev=057438b4c2ef3856b9e4675653078a9bc9aa39cd#057438b4c2ef3856b9e4675653078a9bc9aa39cd"
 dependencies = [
  "flucoma-sys",
  "num-complex",
@@ -939,6 +940,7 @@ dependencies = [
 [[package]]
 name = "flucoma-sys"
 version = "0.1.0"
+source = "git+https://github.com/cristianvogel/flucoma-rs?rev=057438b4c2ef3856b9e4675653078a9bc9aa39cd#057438b4c2ef3856b9e4675653078a9bc9aa39cd"
 dependencies = [
  "cc",
  "cmake",

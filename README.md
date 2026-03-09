@@ -35,7 +35,6 @@ The starter is intentionally small. It gives you a clean architecture, a runnabl
 │       └── ui/                  # Shared presentational components
 └── src-tauri/
     ├── analysis_interface/      # Shared Rust DTOs for frontend/backend boundaries
-    ├── crates/flucoma-rs/       # Git submodule from cristianvogel/flucoma-rs
     ├── resources/
     │   ├── audio/               # Placeholder for bundled starter audio
     │   └── models/              # Placeholder for analysis metadata / embeddings
@@ -65,17 +64,7 @@ The starter is intentionally small. It gives you a clean architecture, a runnabl
 
 ## Getting Started
 
-### Clone with submodules
-
-```bash
-git clone --recurse-submodules <your-new-repo-url>
-```
-
-If you already cloned the repo without submodules:
-
-```bash
-git submodule update --init --recursive
-```
+`flucoma-rs` is pulled by Cargo as a pinned Git dependency, so no Git submodule setup is required.
 
 ### Install
 
@@ -108,6 +97,20 @@ cd src-tauri
 cargo clippy --all-targets --all-features
 ```
 
+### Enable pre-push Rust checks
+
+This repository includes a tracked Git hook at `.githooks/pre-push` that runs:
+
+- `cargo clippy --all-targets --all-features -D warnings`
+- `cargo clippy --all-targets --all-features -- -D warnings`
+- `cargo test`
+
+Enable it once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Where To Extend First
 
 - Add a real project/session model in `src-tauri/src/state`.
@@ -118,7 +121,7 @@ cargo clippy --all-targets --all-features
 ## Notes
 
 - `flucoma-rs` is wired for now as WIP infrastructure, not as a finished product API.
-- `src-tauri/crates/flucoma-rs` is expected to come from the Git submodule and to carry its vendor submodules recursively.
+- `flucoma-rs` is resolved from Git via `src-tauri/Cargo.toml` and pinned to a specific commit for reproducibility.
 - `.taurignore` excludes the FluCoMa vendor tree from `tauri dev` watching, and `flucoma-sys` stages `flucoma-core` into Cargo's build output so CMake does not mutate the vendored source tree during configure.
 - Empty folders are kept where the starter benefits from visible organization.
 - Existing icons are preserved so the template can stay runnable while you rebrand it.

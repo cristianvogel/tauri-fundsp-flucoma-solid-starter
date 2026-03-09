@@ -1,3 +1,0 @@
-[submodule "src-tauri/crates/flucoma-rs"]
-	path = src-tauri/crates/flucoma-rs
-	url = https://github.com/cristianvogel/flucoma-rs
