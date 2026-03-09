@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: Solid Flux Store
+  short_description: Use @solid-primitives/flux-store with explicit getters/actions.
+  default_prompt: Implement SolidJS state management with @solid-primitives/flux-store using explicit getters for reads and actions for writes, including reusable factories.

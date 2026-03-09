@@ -1,0 +1,26 @@
+[package]
+name = "tauri-audio-starter"
+version = "0.1.0"
+description = "Starter template for Tauri + flucoma-rs + funDSP + SolidJS"
+authors = ["Cristian Vogel"]
+edition = "2021"
+
+[lib]
+name = "tauri_audio_starter_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+cpal = "0.15.3"
+flucoma_core = { path = "analysis_interface" }
+flucoma-rs = { path = "crates/flucoma-rs" }
+fundsp = "0.23.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+symphonia = { version = "0.5.5", features = ["aac", "alac", "aiff", "flac", "mp3", "ogg", "vorbis", "wav"] }
+tauri = { version = "2", features = [] }
+
+[features]
+default = []

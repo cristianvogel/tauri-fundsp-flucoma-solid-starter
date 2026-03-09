@@ -1,0 +1,3 @@
+# FluCoMa's CMake configure step mutates files in the vendored source tree.
+# Keep this subtree out of Tauri's backend watcher.
+crates/flucoma-rs/vendor/

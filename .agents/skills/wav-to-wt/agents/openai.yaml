@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: WAV to WT
+  short_description: Convert mono WAVs into WT wavetable files for Incline.
+  default_prompt: Convert a mono WAV (4096 samples per frame) into a valid WT file with incline_preset naming.

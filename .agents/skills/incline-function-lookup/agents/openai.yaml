@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: Incline Function Lookup
+  short_description: Find function definitions by file and symbol in Incline code.
+  default_prompt: Locate Rust and TypeScript function definitions quickly and report exact file paths with line numbers.

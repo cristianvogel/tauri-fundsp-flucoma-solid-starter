@@ -1,0 +1,5 @@
+version: 1
+interface:
+  display_name: Solid Keyboard
+  short_description: Use @solid-primitives/keyboard APIs correctly without demo code.
+  default_prompt: Use @solid-primitives/keyboard primitives to implement keyboard behavior in SolidJS, selecting the right primitive and preserving documented semantics.

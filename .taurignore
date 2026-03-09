@@ -1,0 +1,3 @@
+# FluCoMa's CMake configure step mutates files in the vendored source tree.
+# If Tauri watches this subtree during `tauri dev`, it enters a rebuild loop.
+src-tauri/crates/flucoma-rs/vendor/

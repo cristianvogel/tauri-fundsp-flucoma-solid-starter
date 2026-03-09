@@ -1,0 +1,176 @@
+:root {
+  color: #f8f1e7;
+  background:
+    radial-gradient(circle at top left, rgba(241, 120, 65, 0.22), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(71, 122, 247, 0.2), transparent 32%),
+    linear-gradient(160deg, #121317 0%, #191d25 48%, #0a0c10 100%);
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.5rem;
+  width: min(1120px, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.background-orb {
+  position: absolute;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.65;
+}
+
+.background-orb-a {
+  top: -12rem;
+  left: -10rem;
+  background: rgba(214, 99, 48, 0.26);
+}
+
+.background-orb-b {
+  right: -10rem;
+  bottom: -10rem;
+  background: rgba(65, 112, 255, 0.22);
+}
+
+.hero,
+.status-card,
+.architecture-card,
+.stack-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 15, 20, 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+.hero {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border-radius: 1.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  max-width: 10ch;
+}
+
+.hero-copy {
+  max-width: 50rem;
+  color: rgba(248, 241, 231, 0.78);
+}
+
+.eyebrow,
+.stack-label {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  color: #f4b36f;
+}
+
+.stack-grid,
+.panel-grid,
+.architecture-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-grid,
+.panel-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.architecture-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.stack-card,
+.status-card,
+.architecture-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+}
+
+.status-card h2 {
+  font-size: 1.25rem;
+}
+
+.transport-meta {
+  display: grid;
+  gap: 0.45rem;
+  color: rgba(248, 241, 231, 0.82);
+}
+
+.transport-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  background: linear-gradient(135deg, #f4b36f, #db6840);
+  color: #16181d;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+
+.transport-button:hover:enabled {
+  transform: translateY(-1px);
+}
+
+.transport-button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+@media (max-width: 640px) {
+  .content-frame {
+    width: min(100vw - 1rem, 1120px);
+    padding: 1rem 0 2rem;
+  }
+
+  .hero,
+  .status-card,
+  .architecture-card,
+  .stack-card {
+    border-radius: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+.env
+.venv
+node_modules
+dist
+tmp
+src-tauri/target
+src-tauri/gen
