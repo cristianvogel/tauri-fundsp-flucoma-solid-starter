@@ -46,9 +46,11 @@ pub fn starter_overview(state: tauri::State<'_, TemplateState>) -> StarterOvervi
             transport_status.transport_mode
         ),
         next_steps: vec![
-            "Add audio-file import and queue long-running analysis jobs through state.".to_string(),
-            "Add file-backed transport by decoding imported audio through symphonia.".to_string(),
-            "Introduce project persistence for corpora, slices, descriptors, and UI layout."
+            "Wire the upload panel into Symphonia decode and generate a real magnitude spectrogram."
+                .to_string(),
+            "Run offline BufNMF in the analysis runtime and persist bases, activations, and stems."
+                .to_string(),
+            "Promote the NMFFilter handoff into a realtime input path that reuses saved bases."
                 .to_string(),
         ],
     }

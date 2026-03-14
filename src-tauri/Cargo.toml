@@ -15,7 +15,7 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 cpal = "0.15.3"
 flucoma_core = { path = "analysis_interface" }
-flucoma-rs = { git = "https://github.com/cristianvogel/flucoma-rs", rev = "057438b4c2ef3856b9e4675653078a9bc9aa39cd" }
+flucoma-rs = { git = "https://github.com/cristianvogel/flucoma-rs" }
 fundsp = "0.23.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"

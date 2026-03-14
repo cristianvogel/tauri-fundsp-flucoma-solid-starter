@@ -128,9 +128,9 @@ export default function App() {
                 <p class="eyebrow">Template repository</p>
                 <h1>{data().starterName}</h1>
                 <p class="hero-copy">
-                  A small desktop-audio starter with Solid on the frontend, Tauri in the shell,
-                  funDSP for synthesis structure, and flucoma-rs wired as a work-in-progress
-                  analysis layer.
+                  An offline-first desktop audio sketch for uploading a source file, decomposing it
+                  into NMF bases, and preparing those learned spectra for a later realtime filter
+                  pass.
                 </p>
                 <div class="stack-grid">
                   <div class="stack-card">
